@@ -50,7 +50,7 @@ int main(int argc, char const *argv[]) {
             fputc(COMPILER_VERSION, outptr);
             fputc(RTFL_VERSION, outptr);
             // Write variable name as filename
-            fputc(strlen(varName), outptr);
+            fputc((unsigned char) strlen(varName), outptr);
             fputs(varName, outptr);
             // Don't record line numbers
             fputc(0, outptr);
@@ -58,7 +58,7 @@ int main(int argc, char const *argv[]) {
             /* Write content */
             // Write variable definition
             fputc(0, outptr);
-            fputc(strlen(varName), outptr);
+            fputc((unsigned char) strlen(varName), outptr);
             fputs(varName, outptr);
             // Write value type
             fputc(5, outptr);
