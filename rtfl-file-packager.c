@@ -27,7 +27,7 @@ int main(int argc, char const *argv[]) {
 
         // Check if file is too large
         if(flen > MAX_FILESIZE) {
-            fprintf(stderr, "File is %d bytes long, which exceeds max size of %d", flen, MAX_FILESIZE);
+            fprintf(stderr, "File is %ld bytes long, which exceeds max size of %d", flen, MAX_FILESIZE);
             fclose(fptr);
             return 1;
         } else {
