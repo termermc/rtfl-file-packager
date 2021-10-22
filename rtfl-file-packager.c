@@ -69,7 +69,7 @@ int main(int argc, char const *argv[]) {
             fputc(numBuf[1], outptr);
             fputc(numBuf[0], outptr);
             // Write value
-            fputs(buffer, outptr);
+            fwrite(buffer, flen, 1, outptr);
 
             // Close write file
             fclose(outptr);
